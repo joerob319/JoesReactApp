@@ -18,15 +18,21 @@ function WeightForm () {
     };
 
     return (
-        <form onSubmit = {handleSubmit}>
-            <label>Weight:
+        <form 
+            onSubmit = {handleSubmit}
+            style = {{padding: '2%'}}
+        
+        >
+            <label>
+                Weight:
+            </label>
                 <input
                     type = 'number'
                     name = 'weight'
                     value = {weight}
                     onChange = {e => setWeight(e.target.value)}
                 />
-            </label>
+            
             <input type="submit" value="Submit" />
         </form>
     )
