@@ -6,6 +6,9 @@ import * as firebase from 'firebase/app';
 // Add the Firebase products that you want to use
 import 'firebase/firestore';
 
+
+import { initFirestorter } from 'firestorter';
+
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDDeqdiXI3EGIMQgpCExQbCMTQINd9z7YA",
@@ -20,5 +23,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+// And initialize `firestorter`
+initFirestorter({ firebase: firebase });
 
 export const db = firebase.firestore()
